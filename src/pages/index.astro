@@ -7,9 +7,37 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Olivier Tramis - Accueil</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body><main class="flex flex-row">
+		<aside class="basis-1/6">
+			<h1>Olivier Tramis</h1>
+			<p>Ingénieur au XXXX</p>
+			<!-- <img src={einstein} alt="Alber Einstein" class="" /> -->
+			<p><a href="mailto:olivier.tramis@outlook.fr">olivier.tramis@outlook.fr</a></p>
+			<p><a href="+33701020304">+33 07 01 02 03 04</a></p>
+		</aside>
+	
+		<section class="basis-5/6">
+			<nav class="mx-60">
+				<ul class="flex justify-around h-14">
+						<li class="flex grow basis-1 gap-1">
+							<a
+								class="flex grow justify-center items-center
+										border border-black
+										hover:border-current hover:bg-[#502645]"
+								href="#"
+							>
+								Blank
+							</a>
+						</li>
+				</ul>
+			</nav>
+			<article class="flex flex-col items-center m-5">
+				<h2 class="flex text-4xl my-5">Titre de la page</h2>
+				<!-- Pages -->
+			</article>
+		</section>
+	</main>
 	</body>
 </html>
