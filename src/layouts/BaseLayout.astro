@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
-const homeColor = "#234a5f";
 const { pageTitle } = Astro.props;
 ---
 
@@ -12,16 +11,11 @@ const { pageTitle } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Olivier Tramis - {pageTitle}</title>
-        <style define:vars={{ homeColor }}>
-            a {
-                color: var(--homeColor);
-            }
-        </style>
     </head>
     <body>
         <main class="">
             <aside class="">
-                <h1>Olivier Tramis</h1>
+                <h1 class="text-5xl font-bold">Olivier Tramis</h1>
                 <p>International researcher</p>
                 <p lang="ja"><bdi>姓名: オリヴィエ.トラミス</bdi></p>
                 <!-- <img src={einstein} alt="Alber Einstein" class="" /> -->
