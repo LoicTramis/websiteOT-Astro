@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+const homeColor = "#234a5f";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Olivier Tramis - {pageTitle}</title>
+        <style define:vars={{ homeColor }}>
+            a {
+                color: var(--homeColor);
+            }
+        </style>
+    </head>
+    <body>
+        <main class="">
+            <aside class="">
+                <h1>Olivier Tramis</h1>
+                <p>International researcher</p>
+                <p lang="ja"><bdi>姓名: オリヴィエ.トラミス</bdi></p>
+                <!-- <img src={einstein} alt="Alber Einstein" class="" /> -->
+                <ul>
+                    <li>
+                        <a href="mailto:olivier.tramis@outlook.fr">
+                            <img src="/icon-mail.svg" alt="Mail Icon" />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/otramis-012121985/">
+                            <img src="/icon-linkedin.svg" alt="LinkedIn Icon" />
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </main>
+
+        <section class="">
+            <Navigation />
+            <article class="">
+                <!-- Pages content goes here -->
+                <slot />
+            </article>
+        </section>
+    </body>
+</html>

@@ -1,3 +1,19 @@
+# Questions
+## Navigation
+outlook.com ou .fr ?
+## Design
+
+Mettre la nav bar sur le côté pour avoir uniquement le titre et sous titres en haut de page
+
+## HOME
+
+comprends pas le but de la page
+
+## Publications
+
+Obliger d'avoir le texte dans l'ordre P(n) > Noms > et titre ou je peux arranger différemment ?
+
+
 # Astro Starter Kit: Minimal
 
 ```
