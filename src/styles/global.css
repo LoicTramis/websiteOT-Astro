@@ -6,4 +6,8 @@
 
 @layer base {
     /* Override css rules here for element or classes*/
+    html,
+    body {
+        height: 100dvh;
+    }
 }

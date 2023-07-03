@@ -14,17 +14,17 @@ const pages = [
     },
     {
         path: "/about",
-        name: "About me",
+        name: "About",
     },
 ];
 ---
 
-<nav class="">
-    <ul class="">
+<nav class="w-full basis-3/4 pt-5">
+    <ul class="flex flex-col">
         {
             pages.map((page) => (
-                <li class="">
-                    <a class="" href={page.path}>
+                <li class="flex my-1 rounded bg-slate-200">
+                    <a class="flex grow p-2 text-xl font-bold" href={page.path}>
                         {page.name}
                     </a>
                 </li>

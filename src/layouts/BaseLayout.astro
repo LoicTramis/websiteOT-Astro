@@ -12,35 +12,47 @@ const { pageTitle } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <title>Olivier Tramis - {pageTitle}</title>
     </head>
-    <body>
-        <main class="">
-            <aside class="">
-                <h1 class="text-5xl font-bold">Olivier Tramis</h1>
-                <p>International researcher</p>
-                <p lang="ja"><bdi>姓名: オリヴィエ.トラミス</bdi></p>
+    <body class="flex">
+        <aside class="flex flex-col basis-1/5 items-center px-4 bg-slate-300">
+            <section class="flex flex-col basis-1/4 justify-evenly w-full">
+                <h1 class="text-3xl text-center font-bold">Olivier Tramis</h1>
+                <p class="text-xl text-center font-bold">
+                    International researcher
+                </p>
+                <p class="text-xl text-center font-bold" lang="ja">
+                    <bdi>姓名: オリヴィエ.トラミス</bdi>
+                </p>
                 <!-- <img src={einstein} alt="Alber Einstein" class="" /> -->
-                <ul>
+                <ul class="flex flex-col justify-center">
                     <li>
-                        <a href="mailto:olivier.tramis@outlook.fr">
+                        <a
+                            class="flex flex-row items-center"
+                            href="mailto:olivier.tramis@outlook.fr">
                             <img src="/assets/icon-mail.svg" alt="Mail Icon" />
+                            Mail
                         </a>
                     </li>
                     <li>
                         <a
+                            class="flex flex-row items-center rounded hover:bg-slate-200"
                             href="https://www.linkedin.com/in/otramis-012121985/">
-                            <img src="/assets/icon-linkedin.svg" alt="LinkedIn Icon" />
+                            <img
+                                src="/assets/icon-linkedin.svg"
+                                alt="LinkedIn Icon"
+                            />
+                            LinkedIn
                         </a>
                     </li>
                 </ul>
-            </aside>
-        </main>
-
-        <section class="">
+            </section>
             <Navigation />
+        </aside>
+
+        <main class="flex justify-center basis-4/5">
             <article class="">
-                <!-- Pages content goes here -->
+                <!-- Pages content goes here / Astro.props comes from here -->
                 <slot />
             </article>
-        </section>
+        </main>
     </body>
 </html>
