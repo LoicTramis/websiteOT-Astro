@@ -13,7 +13,8 @@ const { pageTitle } = Astro.props;
         <title>Olivier Tramis - {pageTitle}</title>
     </head>
     <body class="flex">
-        <aside class="flex flex-col basis-1/5 items-center px-4 bg-slate-300">
+        <aside
+            class="flex flex-col basis-1/5 items-center min-w-[200px] px-4 bg-slate-300">
             <section class="flex flex-col basis-1/4 justify-evenly w-full">
                 <h1 class="text-3xl text-center font-bold">Olivier Tramis</h1>
                 <p class="text-xl text-center font-bold">
@@ -45,11 +46,11 @@ const { pageTitle } = Astro.props;
                     </li>
                 </ul>
             </section>
-            <Navigation />
+            <Navigation {pageTitle} />
         </aside>
 
-        <main class="flex justify-center basis-4/5">
-            <article class="">
+        <main class="flex flex-col basis-4/5 bg-slate-600">
+            <article class="flex flex-col items-center">
                 <!-- Pages content goes here / Astro.props comes from here -->
                 <slot />
             </article>

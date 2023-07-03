@@ -7,6 +7,20 @@ const pages = [
     {
         path: "/research",
         name: "Research",
+        routes: [
+            {
+                path: "/health",
+                name: "Health",
+            },
+            {
+                path: "/environment",
+                name: "Environment",
+            },
+            {
+                path: "/adhesion",
+                name: "Adhesion",
+            },
+        ],
     },
     {
         path: "/publications",
@@ -17,18 +31,51 @@ const pages = [
         name: "About",
     },
 ];
+const { pageTitle } = Astro.props;
+let isShow = true;
 ---
 
 <nav class="w-full basis-3/4 pt-5">
     <ul class="flex flex-col">
         {
-            pages.map((page) => (
-                <li class="flex my-1 rounded bg-slate-200">
-                    <a class="flex grow p-2 text-xl font-bold" href={page.path}>
-                        {page.name}
-                    </a>
-                </li>
-            ))
+            pages.map((page) => {
+                {
+                    if (page.name === pageTitle) {
+                        return (
+                            <>
+                                <li class="flex mt-1 rounded-t bg-slate-200">
+                                    <a
+                                        class="flex grow p-2 text-xl font-bold"
+                                        href={page.path}>
+                                        {page.name}
+                                    </a>
+                                </li>
+                                <ul>
+                                    {page.routes.map((route) => (
+                                        <li class="flex pl-5 bg-slate-200 last-of-type:rounded-b last-of-type:mb-1">
+                                            <a
+                                                class="flex grow p-2 text-l font-bold"
+                                                href={page.path + route.path}>
+                                                &bull; {route.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
+                        );
+                    } else {
+                        return (
+                            <li class="flex my-1 rounded bg-slate-200">
+                                <a
+                                    class="flex grow p-2 text-xl font-bold"
+                                    href={page.path}>
+                                    {page.name}
+                                </a>
+                            </li>
+                        );
+                    }
+                }
+            })
         }
     </ul>
 </nav>

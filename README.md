@@ -13,6 +13,12 @@ comprends pas le but de la page
 
 Obliger d'avoir le texte dans l'ordre P(n) > Noms > et titre ou je peux arranger différemment ?
 
+## Getting familiars
+
+**Tasks**
+ -  Create curiosity.astro page in research folder
+ -  Link curiosity page to ALL the others pages
+ -  Add content to curiosity page (title <h2> and paragraph <p>)
 
 # Astro Starter Kit: Minimal
 
