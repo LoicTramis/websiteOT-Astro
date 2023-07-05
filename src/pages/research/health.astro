@@ -1,8 +1,47 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResearchTitle from "../../components/ResearchTitle.astro";
 const pageTitle = "Health";
 ---
 
+<!-- Research Health page -->
 <BaseLayout {pageTitle}>
-    <h2 class="text-4xl uppercase font-bold">{pageTitle}</h2>
+    <ResearchTitle />
+    <h2 class="text-4xl font-bold">{pageTitle}</h2>
+    <article>
+        <h3>
+            Room temperature preservation of biologics in biosourced solid
+            dispersions
+        </h3>
+        <p>Work in progress</p>
+    </article>
+    <article>
+        <h3>
+            Encapsulation of hydrophobic drugs in biosourced solid dispersions
+            to enhance water solubility and bioavailability
+        </h3>
+        <ol>
+            <li>
+                Spontaneous foaming during vaccum drying of organic solvent/PVP
+                solution enhances the dispersion of model hydrophobic drugs
+                (ibuprofen) compared to non-foamed, dried solutions. The foaming
+                acts as an additional mixing force through extensive shear of
+                the solution. (see paper P4)
+            </li>
+            <li>
+                By a rheological approach, we showed that in miscible solutions
+                (organic solvent/PVP), spontaneous foaming occurred in the
+                semi-dilute entangled regime, near the transition to the
+                concentrated regime; for partially miscible solutions (water/
+                α–maltose), it occurred in solutions at a concentration near to
+                the percolation concentration. (see paper P9)
+            </li>
+        </ol>
+    </article>
+    <article>
+        <h3>
+            Ultra-stable, biosourced copolymers for biologics and drug delivery
+        </h3>
+        <p>Work in progress</p>
+    </article>
 </BaseLayout>
