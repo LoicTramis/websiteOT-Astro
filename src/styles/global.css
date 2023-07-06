@@ -22,4 +22,10 @@
     main section li {
         text-align: justify;
     }
+    figcaption {
+        font-size: 1.25em;
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: underline;
+    }
 }

@@ -7,31 +7,60 @@ const pageTitle = "Home";
 
 <BaseLayout {pageTitle}>
     <h2 class="text-4xl font-bold mt-7">Home</h2>
-    <article>
-        <p>Some text</p>
-        <Picture
-            src="/assets/images/home-1.png"
-            widths={[200, 400, 800]}
-            aspectRatio="4:3"
-            sizes="(max-width: 600px) 50vw, 400px"
-            formats={["png"]}
-            alt="Home1"
-        />
-        <Picture
-            src="/assets/images/home-2.png"
-            widths={[200, 400, 800]}
-            aspectRatio="4:3"
-            sizes="(max-width: 600px) 50vw, 400px"
-            formats={["png"]}
-            alt="Home2"
-        />
-        <Picture
-            src="/assets/images/home-3.png"
-            widths={[200, 400, 800]}
-            aspectRatio="4:3"
-            sizes="(max-width: 600px) 50vw, 400px"
-            formats={["png"]}
-            alt="Home3"
-        />
-    </article>
+    <div class="flex flex-row justify-center">
+        <article class="grid grid-cols-2 grid-flow-row gap-15">
+            <section>
+                <figure class="flex flex-col justify-center items-center">
+                    <figcaption>Text for the first image</figcaption>
+                    <Picture
+                        src="/assets/images/home-1.png"
+                        widths={[100, 200, 400]}
+                        aspectRatio="1:0"
+                        sizes="(max-width: 600px) 200px, 400px"
+                        formats={["png"]}
+                        alt="Home1"
+                    />
+                </figure>
+            </section>
+            <section class="col-start-2 row-start-1 row-end-3">
+                <figure class="flex flex-col justify-center items-center">
+                    <figcaption>Text for the second image</figcaption>
+                    <Picture
+                        src="/assets/images/home-2.png"
+                        widths={[115, 230, 460]}
+                        aspectRatio="1:0"
+                        sizes="(max-width: 600px) 230px, 460px"
+                        formats={["png"]}
+                        alt="Home2"
+                    />
+                </figure>
+            </section>
+            <section>
+                <figure class="flex flex-col justify-center items-center">
+                    <figcaption>Text for the third image</figcaption>
+                    <Picture
+                        src="/assets/images/home-3.png"
+                        widths={[100, 400, 800]}
+                        aspectRatio="1:0"
+                        sizes="(max-width: 600px) 50vw, 400px"
+                        formats={["png"]}
+                        alt="Home3"
+                    />
+                </figure>
+            </section>
+            <section class="mt-10 col-start-1 col-end-3">
+                <figure class="flex flex-col justify-center items-center">
+                    <figcaption>Text for the fourth image</figcaption>
+                    <Picture
+                        src="/assets/images/home-4.png"
+                        widths={[128, 256, 512]}
+                        aspectRatio="1:0"
+                        sizes="(max-width: 600px) 256px, 512px"
+                        formats={["png"]}
+                        alt="Home4"
+                    />
+                </figure>
+            </section>
+        </article>
+    </div>
 </BaseLayout>
