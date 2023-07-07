@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ResearchTitle from "../../components/ResearchTitle.astro";
+import { Picture } from "@astrojs/image/components";
 const pageTitle = "Health";
 ---
 
@@ -20,7 +21,7 @@ const pageTitle = "Health";
             Encapsulation of hydrophobic drugs in biosourced solid dispersions
             to enhance water solubility and bioavailability
         </h3>
-        <ol>
+        <ol class="list-decimal list-inside">
             <li>
                 Spontaneous foaming during vaccum drying of organic solvent/PVP
                 solution enhances the dispersion of model hydrophobic drugs
@@ -37,7 +38,23 @@ const pageTitle = "Health";
                 the percolation concentration. (see paper P9)
             </li>
         </ol>
+
+        <figure class="flex flex-col justify-center items-center">
+            <Picture
+                src="/assets/images/health-1.png"
+                widths={[400, 700, 1400]}
+                aspectRatio="1:0"
+                sizes="(max-width: 800px) 400px, 1400px"
+                formats={["png"]}
+                alt="Home1"
+            />
+            <figcaption>
+                Spontaneous foaming of a (ethanol/PVP 2.5k @ 2g/ml ) droplet
+                under moderate vaccum (~-1bar)
+            </figcaption>
+        </figure>
     </article>
+
     <article>
         <h3>
             Ultra-stable, biosourced copolymers for biologics and drug delivery

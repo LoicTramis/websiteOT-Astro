@@ -5,18 +5,23 @@ import { Picture } from "@astrojs/image/components";
 const pageTitle = "Home";
 ---
 
+<!-- 
+    Image 1: environment-3-2.png 
+    Image 2: TDB 
+    Image 3: health-1.png 
+-->
 <BaseLayout {pageTitle}>
     <h2 class="text-4xl font-bold mt-7">Home</h2>
-    <div class="flex flex-row justify-center">
+    <div class="flex flex-row justify-center items-center w-full">
         <article class="grid grid-cols-2 grid-flow-row gap-15">
-            <section>
+            <section class="row-start-1 row-end-3">
                 <figure class="flex flex-col justify-center items-center">
                     <figcaption>Text for the first image</figcaption>
                     <Picture
-                        src="/assets/images/home-1.png"
-                        widths={[100, 200, 400]}
+                        src="/assets/images/environment-3-2.v2.png"
+                        widths={[100, 200, 450]}
                         aspectRatio="1:0"
-                        sizes="(max-width: 600px) 200px, 400px"
+                        sizes="(max-width: 600px) 200px, 450px"
                         formats={["png"]}
                         alt="Home1"
                     />
@@ -27,35 +32,22 @@ const pageTitle = "Home";
                     <figcaption>Text for the second image</figcaption>
                     <Picture
                         src="/assets/images/home-2.png"
-                        widths={[115, 230, 460]}
+                        widths={[115, 230, 420]}
                         aspectRatio="1:0"
-                        sizes="(max-width: 600px) 230px, 460px"
+                        sizes="(max-width: 600px) 230px, 420px"
                         formats={["png"]}
                         alt="Home2"
                     />
                 </figure>
             </section>
-            <section>
+            <section class="mt-10 col-start-1 col-end-3">
                 <figure class="flex flex-col justify-center items-center">
                     <figcaption>Text for the third image</figcaption>
                     <Picture
-                        src="/assets/images/home-3.png"
-                        widths={[100, 400, 800]}
+                        src="/assets/images/health-1.png"
+                        widths={[128, 256, 900]}
                         aspectRatio="1:0"
-                        sizes="(max-width: 600px) 50vw, 400px"
-                        formats={["png"]}
-                        alt="Home3"
-                    />
-                </figure>
-            </section>
-            <section class="mt-10 col-start-1 col-end-3">
-                <figure class="flex flex-col justify-center items-center">
-                    <figcaption>Text for the fourth image</figcaption>
-                    <Picture
-                        src="/assets/images/home-4.png"
-                        widths={[128, 256, 512]}
-                        aspectRatio="1:0"
-                        sizes="(max-width: 600px) 256px, 512px"
+                        sizes="(max-width: 600px) 256px, 900px"
                         formats={["png"]}
                         alt="Home4"
                     />

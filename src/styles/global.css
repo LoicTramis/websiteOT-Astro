@@ -22,10 +22,14 @@
     main section li {
         text-align: justify;
     }
-    figcaption {
-        font-size: 1.25em;
+    main article p {
+        margin-bottom: 2em;
+    }
+    article > section > figure > figcaption {
+        font-size: 0.82em;
         font-weight: bold;
-        font-style: italic;
-        text-decoration: underline;
+    }
+    ol li {
+        margin-bottom: 2em;
     }
 }

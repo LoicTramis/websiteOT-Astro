@@ -1,4 +1,5 @@
 ---
+import { Picture } from "@astrojs/image/components";
 import ResearchTitle from "../../components/ResearchTitle.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const pageTitle = "Adhesion";
@@ -9,6 +10,93 @@ const pageTitle = "Adhesion";
     <ResearchTitle />
     <h2 class="text-4xl font-bold">{pageTitle}</h2>
     <article>
-        <p>Some text</p>
+        <h3>
+            Functionnaly graded adhesives from nanostructured epoxy adhesives
+        </h3>
+        <p>
+            Ph.D. funded by a national project (codenamed WASPE, led by a
+            consortium of AIRBUS, EADS and SAFRAN). The objectives were the
+            development, preparation and characterization of functionally graded
+            epoxy adhesives (FGA). Preparation of the FGA were made such as the
+            methodology and protocol were industrial-ready. Physico-chemical and
+            mechanical characterization of epoxy adhesives were performed using
+            various instrumentation (DSC, FTIR, DMTA, SEM, free surface energy –
+            Digital Image Correlation, tensile and fracture tests). The FGA
+            developed showed higher mechanical properties in terms of adhesion
+            and hygrothermal ageing resistance. Main results have been published
+            and presented in both international and national conferences, as
+            well as reported to industrial partners.
+        </p>
+        <section class="flex justify-around">
+            <figure
+                class="flex flex-col justify-center items-center text-center">
+                <Picture
+                    src="/assets/images/adhesion-1-1.png"
+                    widths={[100, 200, 600]}
+                    aspectRatio="1:0"
+                    sizes="(max-width: 600px) 200px, 600px"
+                    formats={["png"]}
+                    alt="Home1"
+                />
+                <figcaption></figcaption>
+            </figure>
+            <figure
+                class="flex flex-col justify-center items-center text-center">
+                <Picture
+                    src="/assets/images/adhesion-1-2.png"
+                    widths={[100, 200, 600]}
+                    aspectRatio="1:0"
+                    sizes="(max-width: 600px) 200px, 600px"
+                    formats={["png"]}
+                    alt="Home1"
+                />
+                <figcaption></figcaption>
+            </figure>
+        </section>
+    </article>
+    <article>
+        <h3>
+            Polysaccharide coatings with selective and reversible protein
+            adsorption
+        </h3>
+        <p class="italic">Work in progress</p>
+    </article>
+    <article>
+        <h3>
+            Electric field assisted protein adsorption on metallic substrates
+        </h3>
+        <p>
+            We investigated an alternate technique to coat the surface with a
+            protein having no surface affinity, without the use of any exotic
+            chemical agents. An external electric field was utilized to prepare
+            the protein coating on a metal substrate. Stainless steel (St)
+            substrate and lysozyme (LSZ) were used as the surface to be coated
+            and the model non-adsorptive protein, respectively. Dynamics of the
+            adsorption of LSZ on the St surface in the presence and absence of
+            an external electric potential (EEP) were monitored by in-situ
+            ellipsometry. Applying negative surface potential (L0.4 V vs
+            Ag/AgCl) forced the adsorption of LSZ onto the St surface where LSZ
+            did not adsorb without applying any EEP. The repetition of the
+            EEP-application and -cut-off indicated the controllability of the
+            LSZ coating amount depending on the total duration of the
+            EEP-application. The coated LSZ largely remained bound to the
+            surface even by the cut-off of the external electric field, the
+            ratio of which to the detached amount was roughly constant
+            (approximately 7:3). Furthermore, the LSZ coated surface on the St
+            substrate was found to be reversibly switched between being
+            affinitive and non-affinitive to a typical model protein adsorbate
+            (bovine serum albumin) by the EEP-application and cut-off.
+        </p>
+        <figure class="flex flex-col justify-center items-center text-center">
+            <Picture
+                src="/assets/images/adhesion-3.png"
+                widths={[100, 200, 600]}
+                aspectRatio="1:0"
+                sizes="(max-width: 600px) 200px, 600px"
+                formats={["png"]}
+                alt="Home1"
+            />
+            <figcaption></figcaption>
+        </figure>
     </article>
 </BaseLayout>
