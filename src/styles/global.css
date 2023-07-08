@@ -32,4 +32,8 @@
     ol li {
         margin-bottom: 2em;
     }
+    main ul li a {
+        color: blue;
+        text-decoration: underline;
+    }
 }
