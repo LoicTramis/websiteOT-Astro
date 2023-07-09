@@ -3,11 +3,13 @@ import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 const { pageTitle } = Astro.props;
 /* CSS colors */
-const bgColorMain = "bg-white";
-const bgColorAside = "bg-neutral-100";
+const colorTheme = "text-zinc-800 dark:text-zinc-300 bg-white dark:bg-zinc-800";
+const bgColorAside = "bg-neutral-100 dark:bg-zinc-900";
+const bgColorNavigation = "bg-white dark:bg-zinc-600";
+const colorNavigation = "bg-zinc-900 dark:bg-zinc-300";
 ---
 
-<html lang="en">
+<html class="dark" lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -17,20 +19,22 @@ const bgColorAside = "bg-neutral-100";
     </head>
     <body class="flex">
         <aside
-            class=`flex flex-col basis-1/5 items-center min-w-[200px] px-4 border-r border-zinc-500 ${bgColorAside}`>
+            class=`flex flex-col basis-1/5 items-center min-w-[200px] px-4 border-r border-zinc-500 ${colorTheme}`>
             <section class="flex flex-col justify-start w-full">
-                <h1 class="text-3xl text-center font-bold">Olivier Tramis</h1>
+                <h1 class="text-3xl text-center font-bold my-2">
+                    Olivier Tramis
+                </h1>
                 <p class="text-xl text-center font-bold">
                     International researcher
                 </p>
-                <p class="text-xl text-center font-bold" lang="ja">
+                <p class="text-xl text-center font-bold my-2" lang="ja">
                     <bdi>姓名: オリヴィエ.トラミス</bdi>
                 </p>
                 <!-- <img src={einstein} alt="Alber Einstein" class="" /> -->
                 <ul class="flex flex-col justify-center">
                     <li>
                         <a
-                            class="flex flex-row items-center"
+                            class="flex flex-row items-center rounded hover:bg-zinc-200"
                             href="mailto:olivier.tramis@outlook.fr">
                             <img src="/assets/icon-mail.svg" alt="Mail Icon" />
                             Mail
@@ -38,7 +42,7 @@ const bgColorAside = "bg-neutral-100";
                     </li>
                     <li>
                         <a
-                            class="flex flex-row items-center rounded hover:bg-slate-200"
+                            class="flex flex-row items-center rounded hover:bg-zinc-200"
                             href="https://www.linkedin.com/in/otramis-012121985/">
                             <img
                                 src="/assets/icon-linkedin.svg"
@@ -49,11 +53,11 @@ const bgColorAside = "bg-neutral-100";
                     </li>
                 </ul>
             </section>
-            <Navigation {pageTitle} />
+            <Navigation {pageTitle} {colorTheme} />
         </aside>
 
-        <main class=`flex flex-col basis-4/5 ${bgColorMain}`>
-            <section class="flex flex-col items-start p-4">
+        <main class=`flex flex-col basis-4/5 ${colorTheme}`>
+            <section class="flex flex-col items-start h-full p-4">
                 <!-- Pages content goes here / Astro.props comes from here -->
                 <slot />
             </section>

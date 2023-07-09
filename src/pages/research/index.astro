@@ -6,22 +6,56 @@ const pageTitle = "Research";
 <!-- Research Home page -->
 <BaseLayout {pageTitle}>
     <h2 class="text-4xl font-bold mt-7">{pageTitle}</h2>
-    <article>
-        <figure>
-            <img />
-            <figcaption>Health</figcaption>
-        </figure>
-    </article>
-    <article>
-        <figure>
-            <img />
-            <figcaption>Environment</figcaption>
-        </figure>
-    </article>
-    <article>
-        <figure>
-            <img />
-            <figcaption>Adhesion</figcaption>
-        </figure>
+    <article
+        class="flex flex-row justify-evenly items-center w-full h-full max-[920px]:flex-col max-[920px]:justify-evenly">
+        <section class="border border-zinc-500 rounded w-52 h-52">
+            <a
+                href="/research/health"
+                class="flex flex-col justify-center items-center text-centerw-full h-full">
+                <figure class="flex flex-col items-center">
+                    <img
+                        src="/assets/health.svg"
+                        alt="Health icon"
+                        width="140"
+                    />
+                    <figcaption class="font-bold text-xl text-zinc-600">
+                        Health
+                    </figcaption>
+                </figure>
+            </a>
+        </section>
+        <section class="border border-zinc-500 rounded w-52 h-52">
+            <a
+                href="/research/environment"
+                class="flex flex-col justify-center items-center text-centerw-full h-full">
+                <figure class="flex flex-col items-center">
+                    <img
+                        src="assets/environment.svg"
+                        alt="Environment icon"
+                        width="140"
+                    />
+                    <figcaption class="font-bold text-xl text-zinc-600">
+                        Environment
+                    </figcaption>
+                </figure>
+            </a>
+        </section>
+        <section class="border border-zinc-500 rounded w-52 h-52">
+            <a
+                href="/research/adhesion"
+                class="flex flex-col justify-center items-center w-full h-full">
+                <figure class="flex flex-col items-center">
+                    <img
+                        src="assets/adhesion.svg"
+                        alt="Adhesion icon"
+                        width="140"
+                    />
+                    <figcaption class="font-bold text-xl text-zinc-600">
+                        Adhesion
+                    </figcaption>
+                </figure>
+            </a>
+        </section>
+        <!-- Link of the SVG: /assets/curiosity.svg -->
     </article>
 </BaseLayout>

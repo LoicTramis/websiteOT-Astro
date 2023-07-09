@@ -1,5 +1,5 @@
 ---
-const { pageTitle } = Astro.props;
+const { pageTitle, colorTheme } = Astro.props;
 const pages = [
     {
         path: "/",
@@ -32,13 +32,13 @@ const pages = [
         name: "About",
     },
 ];
-const currentPageBgColor = "text-slate-200 bg-slate-600 rounded";
+const currentPageBgColor = "text-zinc-200 bg-zinc-600 rounded";
 const currentPageColor = "";
-const hoverTextColor = "hover:text-slate-600";
+const hover = "hover:bg-zinc-400";
 ---
 
-<nav class="w-full pt-5">
-    <ul class="flex flex-col">
+<nav class=`sticky top-0 w-full pt-5 ${colorTheme}`>
+    <ul class=`flex flex-col`>
         {
             pages.map((page) => {
                 {
@@ -47,11 +47,11 @@ const hoverTextColor = "hover:text-slate-600";
                             <>
                                 <li
                                     class:list={[
-                                        `flex mt-1 rounded-t ${hoverTextColor}
+                                        `flex mt-1 rounded-t ${hover} ${colorTheme}
                                         ${
                                             page.name === pageTitle
                                                 ? currentPageBgColor
-                                                : "bg-slate-300"
+                                                : "bg-zinc-300"
                                         }`,
                                     ]}>
                                     <a
@@ -64,11 +64,11 @@ const hoverTextColor = "hover:text-slate-600";
                                     {page.routes.map((route) => (
                                         <li
                                             class:list={[
-                                                `flex pl-5 last-of-type:rounded-b last-of-type:mb-1 ${hoverTextColor}
+                                                `flex pl-5 last-of-type:rounded-b ${colorTheme} ${hover} 
                                                 ${
                                                     route.name === pageTitle
                                                         ? currentPageBgColor
-                                                        : "bg-slate-300"
+                                                        : "bg-zinc-300"
                                                 }`,
                                             ]}>
                                             <a
@@ -85,10 +85,10 @@ const hoverTextColor = "hover:text-slate-600";
                         return (
                             <li
                                 class:list={[
-                                    `flex mt-1 rounded ${hoverTextColor} ${
+                                    `flex mt-1 rounded ${hover} ${
                                         page.name === pageTitle
                                             ? currentPageBgColor
-                                            : "bg-slate-300"
+                                            : "bg-zinc-300"
                                     }`,
                                 ]}>
                                 <a
