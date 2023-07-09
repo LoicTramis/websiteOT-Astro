@@ -32,9 +32,9 @@ const pages = [
         name: "About",
     },
 ];
-const currentPageBgColor = "text-zinc-200 bg-zinc-600 rounded";
-const currentPageColor = "";
-const hover = "hover:bg-zinc-400";
+const currentPageColorTheme =
+    "rounded text-zinc-200 dark:text-zinc-200 bg-zinc-800 dark:bg-zinc-950";
+const hover = "rounded hover:bg-zinc-400 dark:hover:bg-zinc-600";
 ---
 
 <nav class=`sticky top-0 w-full pt-5 ${colorTheme}`>
@@ -50,7 +50,7 @@ const hover = "hover:bg-zinc-400";
                                         `flex mt-1 rounded-t ${hover} ${colorTheme}
                                         ${
                                             page.name === pageTitle
-                                                ? currentPageBgColor
+                                                ? currentPageColorTheme
                                                 : "bg-zinc-300"
                                         }`,
                                     ]}>
@@ -64,10 +64,10 @@ const hover = "hover:bg-zinc-400";
                                     {page.routes.map((route) => (
                                         <li
                                             class:list={[
-                                                `flex pl-5 last-of-type:rounded-b ${colorTheme} ${hover} 
+                                                `flex pl-5 last-of-type:rounded-b  ${hover} ${colorTheme}
                                                 ${
                                                     route.name === pageTitle
-                                                        ? currentPageBgColor
+                                                        ? currentPageColorTheme
                                                         : "bg-zinc-300"
                                                 }`,
                                             ]}>
@@ -85,9 +85,9 @@ const hover = "hover:bg-zinc-400";
                         return (
                             <li
                                 class:list={[
-                                    `flex mt-1 rounded ${hover} ${
+                                    `flex mt-1 rounded ${hover} ${colorTheme} ${
                                         page.name === pageTitle
-                                            ? currentPageBgColor
+                                            ? currentPageColorTheme
                                             : "bg-zinc-300"
                                     }`,
                                 ]}>
