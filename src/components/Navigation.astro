@@ -32,9 +32,8 @@ const pages = [
         name: "About",
     },
 ];
-const currentPageColorTheme =
-    "rounded text-zinc-200 dark:text-zinc-200 bg-zinc-800 dark:bg-zinc-950";
-const hover = "rounded hover:bg-zinc-400 dark:hover:bg-zinc-600";
+const currentPageColorTheme = "rounded text-zinc-200 bg-zinc-400";
+const hover = "hover:bg-zinc-400 dark:hover:bg-zinc-600";
 ---
 
 <nav class=`sticky top-0 w-full pt-5 ${colorTheme}`>
@@ -47,7 +46,7 @@ const hover = "rounded hover:bg-zinc-400 dark:hover:bg-zinc-600";
                             <>
                                 <li
                                     class:list={[
-                                        `flex mt-1 rounded-t ${hover} ${colorTheme}
+                                        `flex mt-1 rounded-t ${hover}
                                         ${
                                             page.name === pageTitle
                                                 ? currentPageColorTheme
@@ -64,7 +63,7 @@ const hover = "rounded hover:bg-zinc-400 dark:hover:bg-zinc-600";
                                     {page.routes.map((route) => (
                                         <li
                                             class:list={[
-                                                `flex pl-5 last-of-type:rounded-b  ${hover} ${colorTheme}
+                                                `flex pl-5 last-of-type:rounded-b  ${hover}
                                                 ${
                                                     route.name === pageTitle
                                                         ? currentPageColorTheme
@@ -74,7 +73,7 @@ const hover = "rounded hover:bg-zinc-400 dark:hover:bg-zinc-600";
                                             <a
                                                 class="flex grow p-2 text-l font-bold"
                                                 href={page.path + route.path}>
-                                                &bull; {route.name}
+                                                &bull;&nbsp;{route.name}
                                             </a>
                                         </li>
                                     ))}
@@ -85,7 +84,7 @@ const hover = "rounded hover:bg-zinc-400 dark:hover:bg-zinc-600";
                         return (
                             <li
                                 class:list={[
-                                    `flex mt-1 rounded ${hover} ${colorTheme} ${
+                                    `flex mt-1 rounded ${hover} ${
                                         page.name === pageTitle
                                             ? currentPageColorTheme
                                             : "bg-zinc-300"

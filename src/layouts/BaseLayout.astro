@@ -3,13 +3,11 @@ import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 const { pageTitle } = Astro.props;
 /* CSS colors */
-const colorTheme = "text-zinc-800 dark:text-zinc-300 bg-white dark:bg-zinc-800";
-const bgColorAside = "bg-neutral-100 dark:bg-zinc-900";
-const bgColorNavigation = "bg-white dark:bg-zinc-600";
-const colorNavigation = "bg-zinc-900 dark:bg-zinc-300";
+const colorTheme =
+    "text-zinc-800 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800";
 ---
 
-<html class="dark" lang="en">
+<html class="" lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -19,8 +17,16 @@ const colorNavigation = "bg-zinc-900 dark:bg-zinc-300";
     </head>
     <body class="flex">
         <aside
-            class=`flex flex-col basis-1/5 items-center min-w-[200px] px-4 border-r border-zinc-500 ${colorTheme}`>
+            id="aside-menu"
+            class=`hidden max-sm:sticky max-sm:top-0 md:flex md:flex-col basis-1/5 items-center md:min-w-[200px] px-4 border-r border-zinc-500 ${colorTheme}`>
             <section class="flex flex-col justify-start w-full">
+                <img
+                    class="hidden z-20 absolute top-3 left-3 fill-zinc-800 dark:fill-zinc-300"
+                    id="close-icon"
+                    src="/assets/icon-menu-close.svg"
+                    alt="Close icon"
+                    width="25"
+                />
                 <h1 class="text-3xl text-center font-bold my-2">
                     <a href="/">Olivier Tramis</a>
                 </h1>
@@ -34,7 +40,7 @@ const colorNavigation = "bg-zinc-900 dark:bg-zinc-300";
                 <ul class="flex flex-col justify-center">
                     <li>
                         <a
-                            class="flex flex-row items-center rounded hover:bg-zinc-200"
+                            class="flex flex-row items-center rounded hover:bg-zinc-200 dark:hover:bg-zinc-600"
                             href="mailto:olivier.tramis@outlook.fr">
                             <img src="/assets/icon-mail.svg" alt="Mail Icon" />
                             Mail
@@ -42,7 +48,7 @@ const colorNavigation = "bg-zinc-900 dark:bg-zinc-300";
                     </li>
                     <li>
                         <a
-                            class="flex flex-row items-center rounded hover:bg-zinc-200"
+                            class="flex flex-row items-center rounded hover:bg-zinc-200 dark:hover:bg-zinc-600"
                             href="https://www.linkedin.com/in/otramis-012121985/">
                             <img
                                 src="/assets/icon-linkedin.svg"
@@ -56,11 +62,35 @@ const colorNavigation = "bg-zinc-900 dark:bg-zinc-300";
             <Navigation {pageTitle} {colorTheme} />
         </aside>
 
-        <main class=`flex flex-col basis-4/5 ${colorTheme}`>
-            <section class="flex flex-col items-start h-full p-4">
+        <main class=`flex flex-col w-full md:flex-col ${colorTheme}`>
+            <nav class="flex sm:hidden sticky top-3 ml-3">
+                <img
+                    class=""
+                    id="menu-icon"
+                    src="/assets/icon-menu-open.svg"
+                    alt="Menu icon"
+                    width="25"
+                />
+            </nav>
+            <section class="flex flex-col items-start w-full h-full p-4">
                 <!-- Pages content goes here / Astro.props comes from here -->
                 <slot />
             </section>
         </main>
     </body>
+    <script>
+        const asideMenu = document.getElementById("aside-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+        menuIcon.addEventListener("click", () => {
+            asideMenu.classList.remove("hidden");
+            menuIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
+        });
+        closeIcon.addEventListener("click", () => {
+            asideMenu.classList.add("hidden");
+            menuIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+        });
+    </script>
 </html>
