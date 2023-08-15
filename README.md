@@ -1,6 +1,9 @@
-# Questions
-## Publications page
-P8 -> arXiv:2106.02296 link not valid putting this instead https://arxiv.org/abs/2106.02296
+## Instructions
+ - https://github.com/LoicTramis/websiteOT-Astro
+ - Copy https://github.com/LoicTramis/websiteOT-Astro.git
+ - Go in folder:
+   - git clone https://github.com/LoicTramis/websiteOT-Astro.git
+   - cd websiteOT-Astro
 
 ## Getting familiars
 
